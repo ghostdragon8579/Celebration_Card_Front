@@ -7,24 +7,21 @@ float xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackg
 //
 void setup() {
   //
-  println("Width:"+width, "\t", "Height:"+height);
-  println("Display Width:"+displayWidth, "\tDisplay Height: "+displayHeight);
-  //
   //fullScreen();
   size(1000, 800);
- int appWidth = width;
- int appHeight = height;
- //
- xFrontDeadSpace = appWidth*0;
- yFrontDeadSpace = appHeight*0;
- widthFrontDeadSpace = appWidth-1;
- heightFrontDeadSpace = appHeight-1;
- //
- xFrontBackground = appWidth*1/4;
- yFrontBackground = yFrontDeadSpace;
- widthFrontBackground = appWidth*2/4;
- heightFrontBackground = appHeight-1;
- //
+  int appWidth = width;
+  int appHeight = height;
+  //
+  xFrontDeadSpace = appWidth*0;
+  yFrontDeadSpace = appHeight*0;
+  widthFrontDeadSpace = appWidth-1;
+  heightFrontDeadSpace = appHeight-1;
+  //
+  xFrontBackground = appWidth*1/4;
+  yFrontBackground = yFrontDeadSpace;
+  widthFrontBackground = appWidth*2/4;
+  heightFrontBackground = heightFrontDeadSpace;
+  //
 } //End setup
 //
 void draw() {
