@@ -5,6 +5,7 @@ color resetDefaultInk=#FFFFFF;
 int appWidth, appHeight;
 int size;
 PFont Greetingfont;
+PImage FrontImage;
 String Greetings = "Happy Holidays!";
 float xFrontDeadSpace, yFrontDeadSpace, widthFrontDeadSpace, heightFrontDeadSpace;
 float xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackground;
@@ -17,6 +18,11 @@ void setup() {
   size(1000, 800);
   int appWidth = width;
   int appHeight = height;
+  //
+  String open = "/";
+  String imagesPath = open;
+  String Imagefolder = "Images for the Celebration Card3";
+  //String FrontImage = "";
   //
   xFrontDeadSpace = appWidth*0;
   yFrontDeadSpace = appHeight*0;
@@ -33,6 +39,11 @@ void setup() {
   widthFrontText = appWidth*1/3;
   heightFrontText = appHeight*1/4;
   //
+  xFrontImage = xFrontText;
+  //yFrontImage = ;
+  widthFrontImage = widthFrontText;
+  //heightFrontImage = ;
+  //
   Greetingfont = createFont("Arial", 55);
   //
 } //End setup
@@ -44,6 +55,7 @@ void draw() {
   fill(resetDefaultInk);
   rect(xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackground);
   rect(xFrontText, yFrontText, widthFrontText, heightFrontText);
+  rect(xFrontImage, yFrontImage, widthFrontImage, heightFrontImage);
   //
   fill(DarkRed);
   textAlign(CENTER, CENTER); 
