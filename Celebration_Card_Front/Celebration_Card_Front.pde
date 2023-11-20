@@ -6,6 +6,7 @@ int appWidth, appHeight;
 int size;
 PFont Greetingfont;
 PImage FrontImage;
+PImage FrontBackgroundImage;
 String Greetings = "Happy Holidays!";
 float xFrontDeadSpace, yFrontDeadSpace, widthFrontDeadSpace, heightFrontDeadSpace;
 float xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackground;
@@ -20,9 +21,10 @@ void setup() {
   int appHeight = height;
   //
   String open = "/";
-  String imagesPath = open;
+  String ImagesPath = open;
   String Imagefolder = "Images for the Celebration Card3";
-  //String FrontImage = "";
+  String christmastreeImage = "Christmas Tree.jpg";
+  //String ImageUsed = "";
   //
   xFrontDeadSpace = appWidth*0;
   yFrontDeadSpace = appHeight*0;
@@ -33,6 +35,7 @@ void setup() {
   yFrontBackground = yFrontDeadSpace;
   widthFrontBackground = appWidth*2/4;
   heightFrontBackground = heightFrontDeadSpace;
+  FrontBackgroundImage = loadImage(ImagesPath + Imagefolder + open + christmastreeImage);
   //
   xFrontText = appWidth*1/3;
   yFrontText = appHeight*2/3;
@@ -40,9 +43,10 @@ void setup() {
   heightFrontText = appHeight*1/4;
   //
   xFrontImage = xFrontText;
-  //yFrontImage = ;
+  yFrontImage = appHeight*1/20;
   widthFrontImage = widthFrontText;
-  //heightFrontImage = ;
+  heightFrontImage = appHeight*3/5;
+  //FrontImage = loadImage(ImagesPath + Imagefolder + open + ImageUsed);
   //
   Greetingfont = createFont("Arial", 55);
   //
@@ -54,6 +58,7 @@ void draw() {
   rect(xFrontDeadSpace, yFrontDeadSpace, widthFrontDeadSpace, heightFrontDeadSpace);
   fill(resetDefaultInk);
   rect(xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackground);
+  image(FrontBackgroundImage, xFrontBackground, yFrontBackground, widthFrontBackground, heightFrontBackground);
   rect(xFrontText, yFrontText, widthFrontText, heightFrontText);
   rect(xFrontImage, yFrontImage, widthFrontImage, heightFrontImage);
   //
@@ -63,6 +68,8 @@ void draw() {
   textFont(Greetingfont, 50); 
   text(Greetings, xFrontText, yFrontText, widthFrontText, heightFrontText);
   fill(resetDefaultInk);
+  //
+  //image(FrontImage, xFrontImage, yFrontImage, widthFrontImage, heightFrontImage);
   //
 } //End draw
 //
