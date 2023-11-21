@@ -28,7 +28,7 @@ void setup() {
   String ImagesPath = open;
   String Imagefolder = "Images for the Celebration Card3";
   String christmastreeImage = "Christmas Tree.jpg";
-  //String ImageUsed = "";
+  String ImageUsed = "Santa.jpg";
   //
   xFrontDeadSpace = appWidth*0;
   yFrontDeadSpace = appHeight*0;
@@ -55,7 +55,7 @@ void setup() {
   yFrontImage = appHeight*1/20;
   widthFrontImage = widthFrontText;
   heightFrontImage = appHeight*1/2;
-  //FrontImage = loadImage(ImagesPath + Imagefolder + open + ImageUsed);
+  FrontImage = loadImage(ImagesPath + Imagefolder + open + ImageUsed);
   //
   Greetingfont = createFont("Arial", 55);
   //
@@ -94,7 +94,7 @@ void draw() {
   text(OpenQuestion, xOpenCard, yOpenCard, widthOpenCard, heightOpenCard);
   fill(resetDefaultInk);
   //
-  //image(FrontImage, xFrontImage, yFrontImage, widthFrontImage, heightFrontImage);
+  image(FrontImage, xFrontImage, yFrontImage, widthFrontImage, heightFrontImage);
   //
 } //End draw
 //
