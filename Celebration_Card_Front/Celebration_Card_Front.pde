@@ -24,9 +24,10 @@ void setup() {
   int appWidth = width;
   int appHeight = height;
   //
+  String up = "..";
   String open = "/";
-  String ImagesPath = open;
-  String Imagefolder = "Images for the Celebration Card3";
+  String ImagesPath = up + open + up + open + up + open;
+  String Imagefolder = "Images";
   String christmastreeImage = "Christmas Tree.jpg";
   String ImageUsed = "Santa.jpg";
   //
